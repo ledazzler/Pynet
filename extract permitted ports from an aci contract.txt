@@ -1,0 +1,38 @@
+import re
+import pprint
+
+output = """
+<?xml version="1.0" encoding="UTF-8"?><imdata totalCount="1"><vzSubj consMatchT="AtleastOne" descr="" dn="uni/tn-SAP2/brc-XQ-SPD-PRD-NPD-PC/subj-XQ-SPD-PRD-NPD-Sbj" name="XQ-SPD-PRD-NPD-Sbj" nameAlias="" prio="unspecified" provMatchT="AtleastOne" revFltPorts="yes" targetDscp="unspecified"><vzRsSubjFiltAtt directives="log" tnVzFilterName="TCP-1500-1505"/><vzRsSubjFiltAtt directives="" tnVzFilterName="TCP-50000-59901"/><vzRsSubjFiltAtt directives="" tnVzFilterName="TCP-3600-3699"/><vzRsSubjFiltAtt directives="" tnVzFilterName="SSH"/><vzRsSubjFiltAtt directives="" tnVzFilterName="FTP-DATA"/><vzRsSubjFiltAtt directives="" tnVzFilterName="Fragments"/><vzRsSubjFiltAtt directives="" tnVzFilterName="PORTMAP-TCP"/><vzRsSubjFiltAtt directives="" tnVzFilterName="NFSD-UDP"/><vzRsSubjFiltAtt directives="" tnVzFilterName="NFSD-TCP"/><vzRsSubjFiltAtt directives="" tnVzFilterName="TCP-3300-3399"/><vzRsSubjFiltAtt directives="" tnVzFilterName="FTP-CONTROL"/><vzRsSubjFiltAtt directives="" tnVzFilterName="ICMP"/><vzRsSubjFiltAtt directives="" tnVzFilterName="HTTP"/><vzRsSubjFiltAtt directives="" tnVzFilterName="HTTPS"/><vzRsSubjFiltAtt directives="" tnVzFilterName="PORTMAP-UDP"/><vzRsSubjFiltAtt directives="" tnVzFilterName="TCP-8410"/><vzRsSubjFiltAtt directives="" tnVzFilterName="TCP-3200-3299"/></vzSubj></imdata>
+"""
+
+output = output.split('>')
+
+new_out = []
+junk = []
+
+for i in output:
+  if 'tnVzFilterName=' in i:
+    #print 'match %s' %i
+    y = re.search(r'(tnVzFilterName=)(.+)',i)
+    y = y.group(2)
+    y = y.strip('/')
+    new_out.append(y)
+  else:
+    junk.append(i)
+    
+
+
+
+#x = output[4]
+#
+#y = re.search(r'(tnVzFilterName=)(.+)',x)
+#y = y.group(2)
+#y = y.strip('/')
+#
+#print y
+
+for i in new_out:
+  pprint.pprint(i)
+  
+for i in junk:
+  print i + '\n'

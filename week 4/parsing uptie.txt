@@ -1,0 +1,67 @@
+uptime1 = 'twb-sf-881 uptime is 6 weeks, 4 days, 2 hours, 25 minutes'
+
+uptime2 = '3750RJ uptime is 1 hour, 29 minutes'
+
+uptime3 = 'CATS3560 uptime is 8 weeks, 4 days, 18 hours, 16 minutes'
+
+uptime4 = 'rtr1 uptime is 5 years, 18 weeks, 8 hours, 23 minutes'
+
+uptime1_sec = 0
+uptime2_sec = 0
+uptime3_sec = 0
+uptime4_sec = 0
+
+uptime_dict = {'years':'','months':'','weeks':'','days':'','hours':'','minutes':''}
+uptime_dict1 = uptime_dict 
+uptime_dict2 = uptime_dict 
+uptime_dict3 = uptime_dict 
+uptime_dict4 = uptime_dict 
+
+
+uptimes = [uptime1,uptime2,uptime3,uptime4]
+no_text_uptimes = uptimes
+#remove trailing text
+
+counter = 0
+while counter <= ((len(no_text_uptimes)) -1):
+  for i in no_text_uptimes:
+    i = i.split('uptime is')[1]
+    no_text_uptimes[counter] = i
+    #print 'counter is %d' %counter
+    #print no_text_uptimes[counter]
+    #print ""
+    counter += 1
+
+uptime1 = no_text_uptimes[0]
+uptime2 = no_text_uptimes[1]
+uptime3 = no_text_uptimes[2]
+uptime4 = no_text_uptimes[3]
+
+uptime1 = uptime1.split(',')
+
+
+for i in uptime1:
+  if 'weeks' in i:
+    i = i.strip('weeks')
+    uptime_dict1['weeks'] = int(i)
+  elif 'years' in i:
+    i = i.strip('years')
+    uptime_dict1['years'] = int(i)
+  elif 'months' in i:
+    i = i.strip('months')
+    uptime_dict1['months'] = int(i)
+  elif 'days' in i:
+    i = i.strip('days')
+    uptime_dict1['days'] = int(i)
+  elif 'hours' in i:
+    i = i.strip('hours')
+    uptime_dict1['hours'] = int(i)
+  elif 'minutes' in i:
+    i = i.strip('minutes')
+    uptime_dict1['minutes'] = int(i)
+    
+
+  
+  
+  
+print uptime_dict1

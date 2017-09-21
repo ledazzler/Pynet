@@ -1,0 +1,37 @@
+not_done = True
+
+while not_done:
+  ip_addr = raw_input("\n\nPlease enter an IP address: ")
+  valid_ip = True
+  
+  octets = ip_addr.split('.')
+  
+  if len(octets) != 4:
+    print 'not a valid ip address - length'
+    continue
+  
+  for i, octect in enumerate(octets):
+    try:
+      octets[i] = int(octect)
+    except ValueError:
+      valid_ip = False
+  
+  if not valid_ip:
+    print """you entered an ip that can't be converted to integer.   try again"""
+  
+  first_octet,second_octet,third_octet,fourth_octet = octets
+  
+  for a in (first_octet,second_octet,third_octet,fourth_octet):
+    if (a<0) or (a>255):
+      valid_ip = False
+  
+  
+  if valid_ip:
+    ip_str = str(first_octet) + '.' + str(second_octet) + '.' + str(third_octet) + '.' + str(fourth_octet)
+    print 'you entered a valid ip address of %s' %ip_str
+    not_done = False
+    
+  else:
+    print 'not a valid ip try again'
+
+	

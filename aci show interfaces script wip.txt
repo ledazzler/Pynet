@@ -1,0 +1,51 @@
+from __future__ import print_function
+import time
+import netmiko
+
+
+
+Leaf201 = {'hostname': 'Leaf201',
+        'ip': '10.176.250.16'}
+Leaf202 = {'hostname': 'Leaf201',
+        'ip': '10.176.250.17'}
+		
+devices = [Leaf201, Leaf202]
+
+# Define file to log all output to
+logmyscript = open("datetime-audit-" + time.strftime('%b%d%Y') + ".txt", "w")
+
+# Document the start time of the script process
+print("***** Started script at: " + time.strftime("%I:%M%p %Z on %b %d, %Y") + "*****\n")
+logmyscript.write("*****Start script at: " + time.strftime("%I:%M%p %Z on %b %d, %Y") + " *****\n")
+
+
+# SSH to device
+
+for device in devices:
+    netmiko_exceptions = (netmiko.ssh_exception.NetMikoTimeoutException,
+                          netmiko.ssh_exception.NetMikoAuthenticationException)
+
+    try:
+        print('~'*79)  # Print on screen a tilde 79 times to define a seperator
+        logmyscript.write("~"*79 + "\n")  # Print a tilde in logfile 79 times to define a seperator
+        print('Connecting to ', device['hostname'])  # Print on screen what device we are connecting to
+        logmyscript.write("Connecting to device" + " at IP Address: " + device['hostname'] + "\n")  # Print to logfile what device we are connecting to
+        ssh_connection = netmiko.ConnectHandler(device_type="cisco_nxos", ip=device['ip'], username="admin",
+                                                password="CiscoCisco", global_delay_factor=5)
+        ssh_connection.enable()
+        result = ssh_connection.find_prompt() + "\n"
+		result = ssh_connection.find_prompt() + "vsh"
+		result = ssh_connection.find_prompt() + "\n"
+        shint = ssh_connection.send_command("sh clock")  # We are setting the netmiko send_command to a variable so that we can print the interaction
+        print(shclock)  # By printing the send_command we can see what is sent and recieved, you don't have to do this but it helps with troubleshooting
+        logmyscript.write(shclock)
+        
+        # Disconnect from the device
+        ssh_connection.disconnect()
+    except netmiko_exceptions as e:
+        print ('Failed to ', device, e)
+        logmyscript.write("Failed to " + device)
+		
+
+		
+		

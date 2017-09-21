@@ -1,0 +1,182 @@
+XP-LSR6-205# show interface brief
+'
+--------------------------------------------------------------------------------
+Port   VRF          Status IP Address                              Speed    MTU
+--------------------------------------------------------------------------------
+mgmt0  --           up     --                                      1000     1500
+
+--------------------------------------------------------------------------------
+Ethernet      VLAN    Type Mode   Status  Reason                   Speed     Port
+Interface                                                                    Ch #
+--------------------------------------------------------------------------------
+Eth1/1        0       eth  trunk  up      none                        10G(D) 10
+Eth1/2        0       eth  trunk  up      none                        10G(D) 8
+Eth1/3        0       eth  trunk  up      none                        10G(D) --
+Eth1/4        0       eth  trunk  up      none                        10G(D) 3
+Eth1/5        0       eth  trunk  up      none                        10G(D) 1
+Eth1/6        0       eth  trunk  up      none                        10G(D) --
+Eth1/7        0       eth  trunk  up      none                        10G(D) --
+Eth1/8        0       eth  trunk  up      none                        10G(D) --
+Eth1/9        0       eth  trunk  up      none                        10G(D) 5
+Eth1/10       0       eth  trunk  up      none                        10G(D) 6
+Eth1/11       0       eth  trunk  up      none                        10G(D) --
+Eth1/12       0       eth  trunk  up      none                        10G(D) --
+Eth1/13       0       eth  trunk  up      none                        10G(D) --
+Eth1/14       0       eth  trunk  up      none                        10G(D) 9
+Eth1/15       0       eth  trunk  up      none                        10G(D) --
+Eth1/16       0       eth  trunk  up      none                        10G(D) 7
+Eth1/17       96      eth  trunk  down    Link not connected       inherit(D) --
+Eth1/18       24      eth  trunk  up      none                       1000(D) --
+Eth1/19       0       eth  trunk  up      none                       1000(D) 12
+Eth1/20       0       eth  trunk  down    suspended(no LACP PDUs)    1000(D) 11
+Eth1/21       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/22       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/23       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/24       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/25       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/26       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/27       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/28       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/29       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/30       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/31       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/32       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/33       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/34       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/35       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/36       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/37       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/38       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/39       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/40       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/41       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/42       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/43       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/44       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/45       0       eth  trunk  up      none                        10G(D) 2
+Eth1/46       0       eth  trunk  up      none                        10G(D) 4
+Eth1/47       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/48       0       eth  trunk  down    Link not connected       inherit(D) --
+Eth1/49       --      eth  routed up      none                        40G(D) --
+Eth1/49.3     2       eth  routed up      none                        40G(D) --
+Eth1/50       --      eth  routed up      none                        40G(D) --
+Eth1/50.1     2       eth  routed up      none                        40G(D) --
+Eth1/51       --      eth  routed up      none                        40G(D) --
+Eth1/51.4     2       eth  routed up      none                        40G(D) --
+Eth1/52       --      eth  routed up      none                        40G(D) --
+Eth1/52.2     2       eth  routed up      none                        40G(D) --
+Eth1/53       --      eth  routed down    Link not connected       inherit(D) --
+Eth1/54       --      eth  routed down    Link not connected       inherit(D) --
+Eth1/55       --      eth  routed down    XCVR not inserted        inherit(D) --
+Eth1/56       --      eth  routed down    XCVR not inserted        inherit(D) --
+Eth1/57       --      eth  routed down    XCVR not inserted        inherit(D) --
+Eth1/58       --      eth  routed down    XCVR not inserted        inherit(D) --
+Eth1/59       --      eth  routed down    XCVR not inserted        inherit(D) --
+Eth1/60       --      eth  routed down    XCVR not inserted        inherit(D) --
+
+--------------------------------------------------------------------------------
+Port-channel VLAN    Type Mode   Status  Reason                    Speed   Protocol
+Interface
+--------------------------------------------------------------------------------
+Po1          0       eth  trunk  up      none                       a-10G(D)  lacp
+Po2          0       eth  trunk  up      none                       a-10G(D)  lacp
+Po3          0       eth  trunk  up      none                       a-10G(D)  lacp
+Po4          0       eth  trunk  up      none                       a-10G(D)  lacp
+Po5          0       eth  trunk  up      none                       a-10G(D)  lacp
+Po6          0       eth  trunk  up      none                       a-10G(D)  lacp
+Po7          0       eth  trunk  up      none                       a-10G(D)  lacp
+Po8          0       eth  trunk  up      none                       a-10G(D)  lacp
+Po9          0       eth  trunk  up      none                       a-10G(D)  lacp
+Po10         0       eth  trunk  up      none                       a-10G(D)  lacp
+Po11         0       eth  trunk  down    No operational members      1000(D)  lacp
+Po12         0       eth  trunk  up      none                      a-1000(D)  lacp
+
+--------------------------------------------------------------------------------
+Interface     Status     Description
+--------------------------------------------------------------------------------
+Lo0           up         --
+Lo1           up         --
+Lo3           up         --
+Lo4           up         --
+Lo5           up         --
+Lo6           up         --
+Lo1023        up         --
+
+-------------------------------------------------------------------------------
+Interface Secondary VLAN(Type)                    Status Reason
+-------------------------------------------------------------------------------
+Vlan5     --                                      up     --
+Vlan7     --                                      up     --
+Vlan9     --                                      up     --
+Vlan11    --                                      up     --
+Vlan13    --                                      up     --
+Vlan15    --                                      up     --
+Vlan17    --                                      up     --
+Vlan19    --                                      up     --
+Vlan21    --                                      up     --
+Vlan23    --                                      up     --
+Vlan25    --                                      up     --
+Vlan27    --                                      up     --
+Vlan29    --                                      up     --
+Vlan31    --                                      up     --
+Vlan32    --                                      up     --
+Vlan34    --                                      up     --
+Vlan36    --                                      up     --
+Vlan38    --                                      up     --
+Vlan40    --                                      up     --
+Vlan42    --                                      up     --
+Vlan44    --                                      up     --
+Vlan46    --                                      up     --
+Vlan48    --                                      up     --
+Vlan50    --                                      up     --
+Vlan52    --                                      up     --
+Vlan54    --                                      up     --
+Vlan56    --                                      up     --
+Vlan58    --                                      up     --
+Vlan60    --                                      up     --
+Vlan62    --                                      up     --
+Vlan64    --                                      up     --
+Vlan65    --                                      up     --
+Vlan67    --                                      up     --
+Vlan69    --                                      up     --
+Vlan71    --                                      up     --
+Vlan73    --                                      up     --
+Vlan75    --                                      up     --
+Vlan77    --                                      up     --
+Vlan79    --                                      up     --
+Vlan81    --                                      up     --
+Vlan83    --                                      up     --
+Vlan85    --                                      up     --
+Vlan87    --                                      up     --
+Vlan89    --                                      up     --
+Vlan91    --                                      up     --
+Vlan93    --                                      up     --
+Vlan95    --                                      up     --
+Vlan97    --                                      up     --
+Vlan99    --                                      up     --
+Vlan102   --                                      up     --
+Vlan105   --                                      up     --
+Vlan106   --                                      up     --
+Vlan107   --                                      up     --
+Vlan108   --                                      up     --
+
+-------------------------------------------------------------------------------
+Interface                Status     IP Address        Encap type       MTU
+-------------------------------------------------------------------------------
+Tunnel1                  up         --                ivxlan           9000
+Tunnel3                  up         --                ivxlan           9000
+Tunnel4                  up         --                ivxlan           9000
+Tunnel5                  up         --                ivxlan           9000
+Tunnel6                  up         --                ivxlan           9000
+Tunnel7                  up         --                ivxlan           9000
+Tunnel8                  up         --                ivxlan           9000
+Tunnel9                  up         --                ivxlan           9000
+Tunnel10                 up         --                ivxlan           9000
+Tunnel11                 up         --                ivxlan           9000
+Tunnel12                 up         --                ivxlan           9000
+Tunnel13                 up         --                ivxlan           9000
+Tunnel14                 up         --                ivxlan           9000
+Tunnel15                 up         --                ivxlan           9000
+Tunnel16                 up         --                ivxlan           9000
+Tunnel17                 up         --                ivxlan           9000
+Tunnel18                 up         --                ivxlan           9000'

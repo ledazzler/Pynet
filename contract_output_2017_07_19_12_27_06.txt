@@ -1,0 +1,21 @@
+list of permitted services is: 
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>
+
+
+"TCP-1500-1505"
+"TCP-50000-59901"
+"TCP-3600-3699"
+"SSH"
+"FTP-DATA"
+"Fragments"
+"PORTMAP-TCP"
+"NFSD-UDP"
+"NFSD-TCP"
+"TCP-3300-3399"
+"FTP-CONTROL"
+"ICMP"
+"HTTP"
+"HTTPS"
+"PORTMAP-UDP"
+"TCP-8410"
+"TCP-3200-3299"
